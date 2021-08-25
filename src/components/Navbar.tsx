@@ -72,22 +72,22 @@ const Navbar: React.FC = () => {
               <MailIcon />
             </Avatar>
           </Link>
-          <Link href='https://twitter.com/poyo010_' className={classes.mainred} target="_blank">
+          <Link href='https://twitter.com/poyo010_' target="_blank">
             <Avatar className={classes.mainblack}>
               <TwitterIcon />
             </Avatar>
           </Link>
-          <Link href='https://www.instagram.com/poyo010_/' className={classes.mainred} target="_blank">
+          <Link href='https://www.instagram.com/poyo010_/' target="_blank">
             <Avatar className={classes.mainblack}>
               <InstaIcon />
             </Avatar>
           </Link>
-          <Link href='https://www.facebook.com/kaito.masuda.581' className={classes.mainred} target="_blank">
+          <Link href='https://www.facebook.com/kaito.masuda.581' target="_blank">
             <Avatar className={classes.mainblack}>
               <FacebookIcon />
             </Avatar>
           </Link>
-          <Link href='https://github.com/masukai' className={classes.mainred} target="_blank">
+          <Link href='https://github.com/masukai' target="_blank">
             <Avatar className={classes.mainblack}>
               <GitHubIcon />
             </Avatar>

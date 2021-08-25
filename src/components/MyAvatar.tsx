@@ -49,6 +49,12 @@ const MyAvatar: React.FC = () => {
             </Link> 修士課程
           </Typography>
         </Box>
+        <Box display='flex' justifyContent='center' p={1} >
+          <Typography variant='body2'>
+            *If you want to check my email adress, please click the above icon and watch the URL.<br />
+            *メールアドレスは上のアイコンクリック後にURLをご確認ください．
+          </Typography>
+        </Box>
       </Box>
     </p>
   );

@@ -27,7 +27,7 @@ const App: React.FC = () => {
       <ScrollUp />
       <div id="copyright">
         <small>&nbsp;&nbsp;&nbsp;&copy; 2021 KAITO MASUDA. All Rights Reserved.</small>
-    </div>
+      </div>
     </>
   );
 }
