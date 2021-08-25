@@ -127,7 +127,7 @@ const Achievements: React.FC = () => {
           <Card className={classes.root}>
             <CardContent>
               <Typography variant='body1'>
-                2020.<s>05.18-20</s> 08.24-26 (canceled)
+                2020.08.24-26 (canceled)
               </Typography>
               <Typography color='inherit'>
                 International Symposium on Machinery and Mechatronics for Agriculture and Biosystems Engineering (ISMAB) 2020:<br />

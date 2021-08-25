@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
           </AnchorLink>
         </Toolbar>
         <Box className={classes.root}>
-          <Link href='masuda.kaito.27m@st.kyoto-u.ac.jp' className={classes.mainred} target="_blank">
+          <Link href='#masuda.kaito.27m_st.kyoto-u.ac.jp'>
             <Avatar className={classes.mainblack}>
               <MailIcon />
             </Avatar>
