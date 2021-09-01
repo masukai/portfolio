@@ -38,6 +38,65 @@ const Achievements: React.FC = () => {
           <Card className={classes.root}>
             <CardContent>
               <Typography variant='body1'>
+                2021.09.30 SKD
+              </Typography>
+              <Typography color='inherit'>
+                <Link href='http://www.kansai.j-sam.org/conference/index.php' className={classes.maincolor} target="_blank">
+                Meeting of Kansai Branch No. 146</Link>: Presentation<br />
+                Title: The Weight and Morphology of Leaf Lettuce under Alternating / Simultaneous Red and Blue LED Irradiations
+              </Typography>
+              <Typography color='inherit'>
+                <Link href='http://www.kansai.j-sam.org/conference/index.php' className={classes.maincolor} target="_blank">
+                関西農業食料工学会第146回例会</Link>: プレゼン発表<br />
+                タイトル: 赤青交互/同時LED照射におけるリーフレタスの地上部重量と形態の因果解析
+              </Typography>
+            </CardContent>
+          </Card>
+        </Box>
+        <Box display='flex' justifyContent='center' p={1} >
+          <Card className={classes.root}>
+            <CardContent>
+              <Typography variant='body1'>
+                2021.09.21-22 SKD
+              </Typography>
+              <Typography color='inherit'>
+                <Link href='http://www.sasj.org/meeting/2021/index_en.html' className={classes.maincolor} target="_blank">
+                AY2021 Society of Agricultural Structures, Japan (SASJ) Annual conference (online)<br />
+                Research presentation / SASJ 50th Anniversary Program</Link>: Poster<br />
+                Title: Effects of time-variant irradiation and dark period on the leaf lettuce
+              </Typography>
+              <Typography color='inherit'>
+                <Link href='http://www.sasj.org/meeting/2021/' className={classes.maincolor} target="_blank">
+                2021年度農業施設学会大会(オンライン)<br />
+                研究発表会・農業施設学会50周年記念事業</Link>: ポスター発表<br />
+                タイトル: リーフレタスにおける照射強度の時間変動と暗期の効果
+              </Typography>
+            </CardContent>
+          </Card>
+        </Box>
+        <Box display='flex' justifyContent='center' p={1} >
+          <Card className={classes.root}>
+            <CardContent>
+              <Typography variant='body1'>
+                2021.09.14-15 SKD
+              </Typography>
+              <Typography color='inherit'>
+                <Link href='https://jsamfe2021.bpes.kyushu-u.ac.jp/?Page=Home&Lang=en' className={classes.maincolor} target="_blank">
+                79th Annual Meeting on The Japanese Society of Agricultural Machinery and Food Engineers (Online)</Link>: Presentation<br />
+                Title: Time series growth analysis of leaf lettuce under alternating / simultaneous red and blue rradiations
+              </Typography>
+              <Typography color='inherit'>
+                <Link href='https://jsamfe2021.bpes.kyushu-u.ac.jp/' className={classes.maincolor} target="_blank">
+                第79回農業食料工学会年次大会(オンライン開催)</Link>: プレゼン発表<br />
+                タイトル: 赤青交互照射と同時照射におけるリーフレタスの時系列生長解析
+              </Typography>
+            </CardContent>
+          </Card>
+        </Box>
+        <Box display='flex' justifyContent='center' p={1} >
+          <Card className={classes.root}>
+            <CardContent>
+              <Typography variant='body1'>
                 2021.04.27
               </Typography>
               <Typography color='inherit'>
