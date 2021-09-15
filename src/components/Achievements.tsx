@@ -57,7 +57,7 @@ const Achievements: React.FC = () => {
           <Card className={classes.root}>
             <CardContent>
               <Typography variant='body1'>
-                2021.09.21-22 SKD
+                2021.09.22 SKD
               </Typography>
               <Typography color='inherit'>
                 <Link href='http://www.sasj.org/meeting/2021/index_en.html' className={classes.maincolor} target="_blank">
@@ -78,7 +78,7 @@ const Achievements: React.FC = () => {
           <Card className={classes.root}>
             <CardContent>
               <Typography variant='body1'>
-                2021.09.14-15 SKD
+                2021.09.15
               </Typography>
               <Typography color='inherit'>
                 <Link href='https://jsamfe2021.bpes.kyushu-u.ac.jp/?Page=Home&Lang=en' className={classes.maincolor} target="_blank">
