@@ -38,6 +38,26 @@ const Achievements: React.FC = () => {
           <Card className={classes.root}>
             <CardContent>
               <Typography variant='body1'>
+                2021.11.02 SKD
+              </Typography>
+              <Typography color='inherit'>
+                <Link href='https://sites.google.com/view/jsabees-online-congress2021/%E3%83%9B%E3%83%BC%E3%83%A0?authuser=0' className={classes.maincolor} target="_blank">
+                Online Next Generation Research Conference<br />
+                by Japanese Society of Agricultural, Biological Environmental Engineers and Scientists</Link>: Presentation<br />
+                Title: Effects of temporal variation of light intensity by mimicking the solar cycle on leaf lettuce
+              </Typography>
+              <Typography color='inherit'>
+                <Link href='https://sites.google.com/view/jsabees-online-congress2021/%E3%83%9B%E3%83%BC%E3%83%A0?authuser=0' className={classes.maincolor} target="_blank">
+                日本生物環境工学会オンライン次世代研究発表会</Link>: 発表<br />
+                タイトル: 太陽周期を模倣した光強度の時間変動がリーフレタスに及ぼす影響
+              </Typography>
+            </CardContent>
+          </Card>
+        </Box>
+        <Box display='flex' justifyContent='center' p={1} >
+          <Card className={classes.root}>
+            <CardContent>
+              <Typography variant='body1'>
                 2021.09.30 SKD
               </Typography>
               <Typography color='inherit'>
