@@ -44,12 +44,12 @@ const Achievements: React.FC = () => {
                 <Link href='https://sites.google.com/view/jsabees-online-congress2021/%E3%83%9B%E3%83%BC%E3%83%A0?authuser=0' className={classes.maincolor} target="_blank">
                 Online Next Generation Research Conference<br />
                 by Japanese Society of Agricultural, Biological Environmental Engineers and Scientists</Link>: Presentation<br />
-                Title: Effects of temporal variation of light intensity by mimicking the solar cycle on leaf lettuce
+                Title: Relationship between temporal variation of light intensity by mimicking the solar cycle and growth / morphology of leaf lettuce
               </Typography>
               <Typography color='inherit'>
                 <Link href='https://sites.google.com/view/jsabees-online-congress2021/%E3%83%9B%E3%83%BC%E3%83%A0?authuser=0' className={classes.maincolor} target="_blank">
-                日本生物環境工学会オンライン次世代研究発表会</Link>: 発表<br />
-                タイトル: 太陽周期を模倣した光強度の時間変動がリーフレタスに及ぼす影響
+                日本生物環境工学会オンライン次世代研究発表会</Link>: プレゼン発表<br />
+                タイトル: 太陽周期を模倣した光強度の時間変動とリーフレタスの成長/形態の関係
               </Typography>
             </CardContent>
           </Card>
@@ -77,7 +77,7 @@ const Achievements: React.FC = () => {
           <Card className={classes.root}>
             <CardContent>
               <Typography variant='body1'>
-                2021.09.22 SKD
+                2021.09.22
               </Typography>
               <Typography color='inherit'>
                 <Link href='http://www.sasj.org/meeting/2021/index_en.html' className={classes.maincolor} target="_blank">
