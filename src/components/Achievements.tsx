@@ -58,7 +58,7 @@ const Achievements: React.FC = () => {
           <Card className={classes.root}>
             <CardContent>
               <Typography variant='body1'>
-                2021.09.30 SKD
+                2021.09.30
               </Typography>
               <Typography color='inherit'>
                 <Link href='http://www.kansai.j-sam.org/conference/index.php' className={classes.maincolor} target="_blank">
