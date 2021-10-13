@@ -63,7 +63,7 @@ const Achievements: React.FC = () => {
               <Typography color='inherit'>
                 <Link href='http://www.kansai.j-sam.org/conference/index.php' className={classes.maincolor} target="_blank">
                 Meeting of Kansai Branch No. 146</Link>: Presentation<br />
-                Title: The Weight and Morphology of Leaf Lettuce under Alternating / Simultaneous Red and Blue LED Irradiations
+                Title: Causal Analysis of Shoot Fresh Weight and Morphology of Leaf Lettuce under Alternating / Simultaneous Red and Blue LED Irradiations
               </Typography>
               <Typography color='inherit'>
                 <Link href='http://www.kansai.j-sam.org/conference/index.php' className={classes.maincolor} target="_blank">
