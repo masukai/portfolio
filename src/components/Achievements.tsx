@@ -58,6 +58,19 @@ const Achievements: React.FC = () => {
           <Card className={classes.root}>
             <CardContent>
               <Typography variant='body1'>
+                2021.10.27
+              </Typography>
+              <Typography color='inherit'>
+                <Link href='https://mos.odyssey-com.co.jp/index.html' className={classes.maincolor} target="_blank">
+                Microsoft Office Specialist (MOS) Office Excel®︎ 2013</Link>: Passed / 合格
+              </Typography>
+            </CardContent>
+          </Card>
+        </Box>
+        <Box display='flex' justifyContent='center' p={1} >
+          <Card className={classes.root}>
+            <CardContent>
+              <Typography variant='body1'>
                 2021.09.30
               </Typography>
               <Typography color='inherit'>

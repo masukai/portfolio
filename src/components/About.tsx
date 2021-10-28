@@ -29,7 +29,7 @@ const About: React.FC = () => {
             Hello! I am a 24-year-old male graduate student in Kyoto, Japan.<br />
             I'm researching the relationship between irradiation methods and 
             leaf lettuce in plant factories with artificial light (PFALs).<br />
-            My hobbies are cooking, running, and traveling (driving).<br />
+            My hobbies are cooking and traveling (driving).<br />
             I'm interested in data scientist and IT planner / strategist.<br />
             Fundamental Information Technology Engineer Examination [FE] was passed (CBT; 2020).<br />
             I will be taking Applied Information Technology Engineer Examination [AP] (Autumn 2021).<br />
@@ -38,7 +38,7 @@ const About: React.FC = () => {
             the Center for Human Space Studies, Kyoto University</Link>.<br /><br />
             こんにちは！京都で大学院生をしている，24歳男性です．<br />
             人工光型植物工場における照射方法とリーフレタスの応答について研究してます．<br />
-            趣味は料理，ランニング，旅行(ドライブ)です．<br />
+            趣味は料理と旅行(ドライブ)です．<br />
             データサイエンティストやIT企画・ストラテジストに興味があります．基本情報技術者試験合格(2021年春)．
             応用情報技術者試験受験予定(2021年秋)．<br />
             PythonとRはちょっと使えます(4年くらい)．Typescript+ReactとSQLは勉強中です．<br />
