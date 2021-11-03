@@ -38,7 +38,7 @@ const Achievements: React.FC = () => {
           <Card className={classes.root}>
             <CardContent>
               <Typography variant='body1'>
-                2021.11.02 SKD
+                2021.11.02
               </Typography>
               <Typography color='inherit'>
                 <Link href='https://sites.google.com/view/jsabees-online-congress2021/%E3%83%9B%E3%83%BC%E3%83%A0?authuser=0' className={classes.maincolor} target="_blank">
