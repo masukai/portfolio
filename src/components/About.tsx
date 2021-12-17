@@ -30,15 +30,15 @@ const About: React.FC = () => {
             My hobbies are cooking and traveling (driving).<br />
             I'm interested in data scientist and IT planner / strategist.<br />
             Fundamental Information Technology Engineer Examination [FE] was passed (CBT; 2020).<br />
-            I will be taking Applied Information Technology Engineer Examination [AP] (Autumn 2021).<br />
-            I can use Python and R a little (about 4 years), and I'm learning Typescript+React and SQL.<br />
+            I will be taking Applied Information Technology Engineer Examination [AP] (Spring 2022).<br />
+            I can use Python and R a little (about 5 years), and I'm learning Typescript+React and SQL.<br />
             I'm working as an office assistant (OA) at <Link href='https://space.innovationkyoto.org/' className={classes.mainred} target="_blank">
             the Center for Human Space Studies, Kyoto University</Link>.<br /><br />
             こんにちは！京都で大学院生をしている，24歳男性です．
             趣味は料理と旅行(ドライブ)です．<br />
             データサイエンティストやIT企画・ストラテジストに興味があります．基本情報技術者試験合格(2021年春)．
-            応用情報技術者試験受験予定(2021年秋)．<br />
-            PythonとRはちょっと使えます(4年くらい)．Typescript+ReactとSQLは勉強中です．<br />
+            応用情報技術者試験受験予定(2022年春)．<br />
+            PythonとRはちょっと使えます(5年くらい)．Typescript+ReactとSQLは勉強中です．<br />
             その他，<Link href='https://space.innovationkyoto.org/' className={classes.mainred} target="_blank">
             京都大学総合生存学館有人宇宙学研究センター</Link>でオフィスアシスタントとして働いています．
           </Typography>
