@@ -38,6 +38,15 @@ const Achievements: React.FC = () => {
             Achievements
           </Typography>
         </Box>
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="2021-second-content"
+            id="2021-second-header"
+          >
+            <Typography variant='body1' align='center'>2021 Summary (second half)</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
         <Box display='flex' justifyContent='center' p={1} >
           <Card className={classes.root}>
             <CardContent>
@@ -146,6 +155,8 @@ const Achievements: React.FC = () => {
             </CardContent>
           </Card>
         </Box>
+          </AccordionDetails>
+        </Accordion>
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
