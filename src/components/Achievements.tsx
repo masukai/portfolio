@@ -38,6 +38,20 @@ const Achievements: React.FC = () => {
             Achievements
           </Typography>
         </Box>
+        <Box display='flex' justifyContent='center' p={1} >
+          <Card className={classes.root}>
+            <CardContent>
+              <Typography variant='body1'>
+                2022.01.30
+              </Typography>
+              <Typography color='inherit'>
+                <Link href='http://jsabees.org/ecb/' className={classes.maincolor} target="_blank">
+                Environmental Control in Biology</Link>: Accepted a peer-reviewed treatise / 査読付き英語論文受諾<br />
+                Title / タイトル: Effects of time variation of light intensity on the growth of the leaf lettuce "Greenwave"
+              </Typography>
+            </CardContent>
+          </Card>
+        </Box>
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}

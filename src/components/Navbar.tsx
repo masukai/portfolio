@@ -10,6 +10,7 @@ import MailIcon from '@material-ui/icons/Mail'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import InstaIcon from '@material-ui/icons/Instagram'
 import FacebookIcon from '@material-ui/icons/Facebook'
+import YouTubeIcon from '@material-ui/icons/YouTube'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import Avatar from '@material-ui/core/Avatar'
 
@@ -67,7 +68,7 @@ const Navbar: React.FC = () => {
           </AnchorLink>
         </Toolbar>
         <Box className={classes.root}>
-          <Link href='#masuda.kaito.27m_st.kyoto-u.ac.jp'>
+          <Link href='#masuda.kaito.v30_kyoto-u.jp'>
             <Avatar className={classes.mainblack}>
               <MailIcon />
             </Avatar>
@@ -85,6 +86,11 @@ const Navbar: React.FC = () => {
           <Link href='https://www.facebook.com/kaito.masuda.581' target="_blank">
             <Avatar className={classes.mainblack}>
               <FacebookIcon />
+            </Avatar>
+          </Link>
+          <Link href='https://www.youtube.com/channel/UCs3PA1NIqcmAq3FZBOSax6g' target="_blank">
+            <Avatar className={classes.mainblack}>
+              <YouTubeIcon />
             </Avatar>
           </Link>
           <Link href='https://github.com/masukai' target="_blank">
