@@ -6,13 +6,13 @@ import Typography from '@material-ui/core/Typography'
 import Link from '@material-ui/core/Link'
 
 // 画像ファイルをインポート
-import ImageFile from '../static/images/masuda2.png'
+import ImageFile from '../static/images/pu.png'
 
 const useStyles = makeStyles((theme) => ({
   // 表示サイズを指定
   large: {
-    width: theme.spacing(20),
-    height: theme.spacing(20),
+    width: theme.spacing(25),
+    height: theme.spacing(25),
   },
   mainred: {
     color: '#B5495B',
