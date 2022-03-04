@@ -41,12 +41,10 @@ const MyAvatar: React.FC = () => {
         </Box>
         <Box display='flex' justifyContent='center' p={1} >
           <Typography variant='body1'>
-            Master Student. <Link href='https://www.kais.kyoto-u.ac.jp/english/' className={classes.mainred} target="_blank">
-            Graduate School of Agriculture, Kyoto University.
-            </Link><br />
-            <Link href='https://www.kais.kyoto-u.ac.jp/japanese/' className={classes.mainred} target="_blank">
-              京都大学大学院農学研究科
-            </Link> 修士課程
+            <Link href='https://masukai.github.io/portfolio/' className={classes.mainred} target="_blank">
+            このサイト
+            </Link>
+            はポートフォリオ/CVとなっております．
           </Typography>
         </Box>
         <Box display='flex' justifyContent='center' p={1} >

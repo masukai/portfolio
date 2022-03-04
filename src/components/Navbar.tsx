@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
   mainblack: {
     color: '#E8E8E8',
     backgroundColor: '#373C38',
+    //border: 0,
+    //borderRadius: 3,
+    boxShadow: '0 2px 5px 3px rgba(55, 55, 55, .5)',
   },
   mainred: {
     color: '#E8E8E8',

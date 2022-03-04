@@ -11,8 +11,9 @@ import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
 
-import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
 import SchoolIcon from '@material-ui/icons/School';
+import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
+import PencilIcon from '@material-ui/icons/Create';
 import PublicIcon from '@material-ui/icons/Public';
 import DesktopWindowsIcon from '@material-ui/icons/DesktopWindows';
 import MemoryIcon from '@material-ui/icons/Memory';
@@ -33,6 +34,9 @@ const useStyles = makeStyles((theme) => ({
   mainred: {
     color: '#E8E8E8',
     backgroundColor: '#B5495B',
+    //border: 0,
+    //borderRadius: 3,
+    boxShadow: '0 2px 5px 3px rgba(255, 105, 135, .5)',
   },
   maincolor: {
     color: '#B5495B',
@@ -40,6 +44,9 @@ const useStyles = makeStyles((theme) => ({
   subblue: {
     color: '#E8E8E8',
     backgroundColor: '#5B49B5',
+    //border: 0,
+    //borderRadius: 3,
+    boxShadow: '0 2px 5px 3px rgba(135, 105, 255, .5)',
   },
   subcolor: {
     color: '#5B49B5',
@@ -63,6 +70,38 @@ const History: React.FC = () => {
         </Box>
         <Box display='flex' justifyContent='center' p={1} >
     <Timeline align="alternate">
+      <TimelineItem>
+        <TimelineOppositeContent>
+          <Typography variant="body2" color="inherit">
+            2016.04-2020.03
+          </Typography>
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineDot className={classes.subblue}>
+            <SchoolIcon />
+          </TimelineDot>
+          <TimelineConnector className={classes.Tail} />
+        </TimelineSeparator>
+        <TimelineContent>
+          <Paper elevation={3} className={classes.paper}>
+            <Typography variant="body1" component="h6">
+              <Link href='https://www.kais.kyoto-u.ac.jp/japanese/' className={classes.subcolor} target="_blank">
+              京都大学農学部
+              </Link>
+            </Typography>
+            <Typography variant="body2">
+              <Link href='http://www.aee.kais.kyoto-u.ac.jp/' className={classes.subcolor} target="_blank">
+              地域環境工学科
+              </Link>
+              に入学しました．
+              <Link href='http://energy.kais.kyoto-u.ac.jp/lase/index.php' className={classes.subcolor} target="_blank">
+              農業システム工学分野
+              </Link>
+              で人工光型植物工場の研究をしたく，この学科を選択しました．
+            </Typography>
+          </Paper>
+        </TimelineContent>
+      </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
           <Typography variant="body2" color="inherit">
@@ -96,7 +135,7 @@ const History: React.FC = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot className={classes.mainred}>
-            <SchoolIcon />
+            <PencilIcon />
           </TimelineDot>
           <TimelineConnector className={classes.Tail} />
         </TimelineSeparator>
@@ -184,6 +223,42 @@ const History: React.FC = () => {
             </Typography>
             <Typography variant="body2">
               小学生を対象としたArduinoと3Dプリンタを用いたロボット製作全般の運営支援をしました．
+            </Typography>
+          </Paper>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineOppositeContent>
+          <Typography variant="body2" color="inherit">
+            2020.04-2022.03
+          </Typography>
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineDot className={classes.subblue}>
+            <SchoolIcon />
+          </TimelineDot>
+          <TimelineConnector className={classes.Tail} />
+        </TimelineSeparator>
+        <TimelineContent>
+          <Paper elevation={3} className={classes.paper}>
+            <Typography variant="body1" component="h6">
+              <Link href='https://www.kais.kyoto-u.ac.jp/japanese/' className={classes.subcolor} target="_blank">
+              京都大学大学院農学研究科
+              </Link><br />
+              <Link href='https://www.kais.kyoto-u.ac.jp/english/' className={classes.subcolor} target="_blank">
+              Graduate School of Agriculture, Kyoto University
+              </Link>
+            </Typography>
+            <Typography variant="body2">
+              引き続き，人工光型植物工場の研究をするために同じ研究室の
+              <Link href='http://www.est.kais.kyoto-u.ac.jp/' className={classes.subcolor} target="_blank">
+              地域環境科学専攻
+              </Link>
+              /
+              <Link href='http://energy.kais.kyoto-u.ac.jp/lase/index.php' className={classes.subcolor} target="_blank">
+              農業システム工学分野
+              </Link>
+              に入りました．
             </Typography>
           </Paper>
         </TimelineContent>
