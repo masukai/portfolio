@@ -42,6 +42,23 @@ const Achievements: React.FC = () => {
           <Card className={classes.root}>
             <CardContent>
               <Typography variant='body1'>
+                2022.03.04
+              </Typography>
+              <Typography color='inherit'>
+                <Link href='https://www.jafp.or.jp/eng/' className={classes.maincolor} target="_blank">
+                Japan Association for Financial Planner (JAFP), The test of 3rd grade Certified Skilled Professional of Financial Planning (2022/1)</Link>: Passed
+              </Typography>
+              <Typography color='inherit'>
+                <Link href='https://www.jafp.or.jp/exam/' className={classes.maincolor} target="_blank">
+                日本FP協会, 3級ファイナンシャル・プランニング技能検定 (2022/1)</Link>: 合格
+              </Typography>
+            </CardContent>
+          </Card>
+        </Box>
+        <Box display='flex' justifyContent='center' p={1} >
+          <Card className={classes.root}>
+            <CardContent>
+              <Typography variant='body1'>
                 2022.01.30
               </Typography>
               <Typography color='inherit'>
