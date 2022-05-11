@@ -354,7 +354,7 @@ const History: React.FC = () => {
             </Link>
             </Typography>
             <Typography variant="body2">
-              経営企画部デジタルチームで働く予定です．
+              経営企画部で働いています．
             </Typography>
           </Paper>
         </TimelineContent>
