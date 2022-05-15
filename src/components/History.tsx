@@ -94,7 +94,7 @@ const History: React.FC = () => {
               地域環境工学科
               </Link>
               に入学しました．
-              <Link href='http://energy.kais.kyoto-u.ac.jp/lase/index.php' className={classes.subcolor} target="_blank">
+              <Link href='http://energy.kais.kyoto-u.ac.jp/index.html' className={classes.subcolor} target="_blank">
               農業システム工学分野
               </Link>
               で人工光型植物工場の研究をしたく，この学科を選択しました．
@@ -255,7 +255,7 @@ const History: React.FC = () => {
               地域環境科学専攻
               </Link>
               /
-              <Link href='http://energy.kais.kyoto-u.ac.jp/lase/index.php' className={classes.subcolor} target="_blank">
+              <Link href='http://energy.kais.kyoto-u.ac.jp/index.html' className={classes.subcolor} target="_blank">
               農業システム工学分野
               </Link>
               に入りました．
