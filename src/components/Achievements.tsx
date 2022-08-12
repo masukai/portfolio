@@ -42,6 +42,21 @@ const Achievements: React.FC = () => {
           <Card className={classes.root}>
             <CardContent>
               <Typography variant='body1'>
+                2022.07.01
+              </Typography>
+              <Typography color='inherit'>
+                <Link href='http://jsabees.org/ecb/' className={classes.maincolor} target="_blank">
+                Environmental Control in Biology</Link>: Published / 出版<br />
+                Title / タイトル: <Link href='https://www.jstage.jst.go.jp/article/ecb/60/3/60_171/_article/-char/en' className={classes.maincolor} target="_blank">
+                Effects of Time Variation of Light Intensity on the Growth of the Leaf Lettuce “Greenwave”</Link>
+              </Typography>
+            </CardContent>
+          </Card>
+        </Box>
+        <Box display='flex' justifyContent='center' p={1} >
+          <Card className={classes.root}>
+            <CardContent>
+              <Typography variant='body1'>
                 2022.03.04
               </Typography>
               <Typography color='inherit'>
