@@ -69,7 +69,7 @@ const History: React.FC = () => {
     <Timeline align="alternate">
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="inherit">
+          <Typography variant="body1" color="inherit">
             2016.04-2020.03
           </Typography>
         </TimelineOppositeContent>
@@ -81,7 +81,7 @@ const History: React.FC = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body2" component="h6">
+            <Typography variant="body2">
               <Link href='https://www.kais.kyoto-u.ac.jp/japanese/' className={classes.subcolor} target="_blank">
               京都大学農学部
               </Link>
@@ -101,7 +101,7 @@ const History: React.FC = () => {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="inherit">
+          <Typography variant="body1" color="inherit">
             2016.04-2018.07
           </Typography>
         </TimelineOppositeContent>
@@ -113,7 +113,7 @@ const History: React.FC = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body2" component="h6">
+            <Typography variant="body2">
               <Link href='http://shootingstars.hannnari.com/' className={classes.subcolor} target="_blank">
               京都大学鳥人間チームShootingStars
               </Link>
@@ -126,7 +126,7 @@ const History: React.FC = () => {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="inherit">
+          <Typography variant="body1" color="inherit">
             2017.04-2021.03
           </Typography>
         </TimelineOppositeContent>
@@ -138,7 +138,7 @@ const History: React.FC = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body2" component="h6">
+            <Typography variant="body2">
               <Link href='https://www.usss.kyoto-u.ac.jp/' className={classes.maincolor} target="_blank">
               京都大学宇宙総合学研究ユニット
               </Link>
@@ -151,7 +151,7 @@ const History: React.FC = () => {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="inherit">
+          <Typography variant="body1" color="inherit">
             2018.11-2019.03
           </Typography>
         </TimelineOppositeContent>
@@ -163,7 +163,7 @@ const History: React.FC = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body2" component="h6">
+            <Typography variant="body2">
               <Link href='https://hilltop21.co.jp/' className={classes.maincolor} target="_blank">
               HILLTOP株式会社
               </Link>
@@ -176,7 +176,7 @@ const History: React.FC = () => {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="inherit">
+          <Typography variant="body1" color="inherit">
             2020.04-2022.03
           </Typography>
         </TimelineOppositeContent>
@@ -188,7 +188,7 @@ const History: React.FC = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body2" component="h6">
+            <Typography variant="body2">
               <Link href='https://www.kais.kyoto-u.ac.jp/japanese/' className={classes.subcolor} target="_blank">
               京都大学大学院農学研究科
               </Link><br />
@@ -212,8 +212,8 @@ const History: React.FC = () => {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="inherit">
-            2020.09-
+          <Typography variant="body1" color="inherit">
+            2020.09-2022.03
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
@@ -224,7 +224,7 @@ const History: React.FC = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body2" component="h6" className={classes.subcolor}>
+            <Typography variant="body2" className={classes.subcolor}>
               深層学習・機械学習勉強会
             </Typography>
             <Typography variant="body2">
@@ -235,7 +235,7 @@ const History: React.FC = () => {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="inherit">
+          <Typography variant="body1" color="inherit">
             2021.05-2022.03
           </Typography>
         </TimelineOppositeContent>
@@ -247,7 +247,7 @@ const History: React.FC = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body2" component="h6">
+            <Typography variant="body2">
             <Link href='https://space.innovationkyoto.org/' className={classes.maincolor} target="_blank">
               京都大学総合生存学館有人宇宙学研究センター
             </Link>
@@ -260,7 +260,7 @@ const History: React.FC = () => {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="inherit">
+          <Typography variant="body1" color="inherit">
             2022.04-
           </Typography>
         </TimelineOppositeContent>
@@ -272,7 +272,7 @@ const History: React.FC = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body2" component="h6">
+            <Typography variant="body2">
             <Link href='https://www.glico.com/jp/' className={classes.subcolor} target="_blank">
               江崎グリコ株式会社
             </Link>

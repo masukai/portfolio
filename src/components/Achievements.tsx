@@ -102,25 +102,11 @@ const Achievements: React.FC = () => {
             </CardContent>
           </Card>
         </Box>
-        <Box display='flex' justifyContent='center' p={1} >
-          <Card className={classes.root}>
-            <CardContent>
-              <Typography variant='body2'>
-                2022.01.30
-              </Typography>
-              <Typography variant='body2' color='inherit'>
-                <Link href='http://jsabees.org/ecb/' className={classes.maincolor} target="_blank">
-                Environmental Control in Biology</Link>: Accepted a peer-reviewed treatise / 査読付き英語論文受諾<br />
-                Title / タイトル: Effects of time variation of light intensity on the growth of the leaf lettuce "Greenwave"
-              </Typography>
-            </CardContent>
-          </Card>
-        </Box>
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
-            aria-controls="2021"
-            id="2021"
+            aria-controls="2021-content"
+            id="2021-header"
           >
             <Typography variant='body2' align='center'>2021 Summary</Typography>
           </AccordionSummary>
@@ -246,21 +232,6 @@ const Achievements: React.FC = () => {
               <Typography variant='body2' color='inherit'>
                 <Link href='https://www.jitec.ipa.go.jp/1_11seido/fe.html' className={classes.maincolor} target="_blank">
                 令和2年度基本情報技術者試験(CBT)</Link>: 合格
-              </Typography>
-            </CardContent>
-          </Card>
-        </Box>
-        <Box display='flex' justifyContent='center' p={1} >
-          <Card className={classes.root}>
-            <CardContent>
-              <Typography variant='body2'>
-                2021.04.09
-              </Typography>
-              <Typography variant='body2' color='inherit'>
-                <Link href='http://jsabees.org/ecb/' className={classes.maincolor} target="_blank">
-                Environmental Control in Biology</Link>: Accepted a peer-reviewed treatise / 査読付き英語論文受諾<br />
-                Title / タイトル: Quantification of the effects of alternating and simultaneous red and blue irradiations on
-                plant morphology and shoot fresh weight in leaf lettuce 'Greenwave'
               </Typography>
             </CardContent>
           </Card>
