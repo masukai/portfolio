@@ -1,18 +1,14 @@
 import React from 'react'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Button from '@material-ui/core/Button'
 import Box from '@material-ui/core/Box'
 import { makeStyles } from '@material-ui/core/styles'
 import Link from '@material-ui/core/Link'
-import MailIcon from '@material-ui/icons/Mail'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import InstaIcon from '@material-ui/icons/Instagram'
 import FacebookIcon from '@material-ui/icons/Facebook'
-import YouTubeIcon from '@material-ui/icons/YouTube'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import Avatar from '@material-ui/core/Avatar'
+import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   mainred: {
     color: '#E8E8E8',
-    backgroundColor: '#B5495B',
+    backgroundColor: '#5B49B5',
   },
 }));
 
@@ -44,38 +40,15 @@ const Navbar: React.FC = () => {
         style={{ alignItems: 'center'}}
         className={classes.mainred}
       >
-        <Toolbar>
-          <AnchorLink href='#about' style={{
-            textDecoration: 'none',
-            color: 'inherit'
-          }}>
-            <Button color='inherit'>
-              ABOUT
-            </Button>
-          </AnchorLink>
-          <AnchorLink href='#achievements' style={{
-            textDecoration: 'none',
-            color: 'inherit'
-          }}>
-            <Button color='inherit'>
-              ACHIEVEMENTS
-            </Button>
-          </AnchorLink>
-          <AnchorLink href='#history' style={{
-            textDecoration: 'none',
-            color: 'inherit'
-          }}>
-            <Button color='inherit'>
-              HISTORY
-            </Button>
-          </AnchorLink>
-        </Toolbar>
+        <Box display='flex' justifyContent='center' p={1} >
+        <Typography variant='body2'>
+            <Link href='https://masukai.github.io/portfolio/' className={classes.mainred} target="_blank">
+            このサイト
+            </Link>
+            はポートフォリオ/CVです．
+          </Typography>
+        </Box>
         <Box className={classes.root}>
-          <Link href='#masuda.kaito.v30_kyoto-u.jp'>
-            <Avatar className={classes.mainblack}>
-              <MailIcon />
-            </Avatar>
-          </Link>
           <Link href='https://twitter.com/poyo010_' target="_blank">
             <Avatar className={classes.mainblack}>
               <TwitterIcon />
@@ -89,11 +62,6 @@ const Navbar: React.FC = () => {
           <Link href='https://www.facebook.com/kaito.masuda.581' target="_blank">
             <Avatar className={classes.mainblack}>
               <FacebookIcon />
-            </Avatar>
-          </Link>
-          <Link href='https://www.youtube.com/channel/UCs3PA1NIqcmAq3FZBOSax6g' target="_blank">
-            <Avatar className={classes.mainblack}>
-              <YouTubeIcon />
             </Avatar>
           </Link>
           <Link href='https://github.com/masukai' target="_blank">

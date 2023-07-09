@@ -13,11 +13,8 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 
 import SchoolIcon from '@material-ui/icons/School';
 import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
-import PencilIcon from '@material-ui/icons/Create';
 import PublicIcon from '@material-ui/icons/Public';
 import DesktopWindowsIcon from '@material-ui/icons/DesktopWindows';
-import MemoryIcon from '@material-ui/icons/Memory';
-import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
 import CodeIcon from '@material-ui/icons/Code';
 import EmojiFoodBeverageIcon from '@material-ui/icons/EmojiFoodBeverage';
 
@@ -64,7 +61,7 @@ const History: React.FC = () => {
     <p className={classes.backcolor}>
       <Box p={2}>
         <Box display='flex' justifyContent='center' p={1} >
-          <Typography variant='h4' >
+          <Typography variant='h5' >
             History
           </Typography>
         </Box>
@@ -84,7 +81,7 @@ const History: React.FC = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body1" component="h6">
+            <Typography variant="body2" component="h6">
               <Link href='https://www.kais.kyoto-u.ac.jp/japanese/' className={classes.subcolor} target="_blank">
               京都大学農学部
               </Link>
@@ -116,38 +113,13 @@ const History: React.FC = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body1" component="h6">
+            <Typography variant="body2" component="h6">
               <Link href='http://shootingstars.hannnari.com/' className={classes.subcolor} target="_blank">
               京都大学鳥人間チームShootingStars
               </Link>
             </Typography>
             <Typography variant="body2">
               フェアリング班班長兼設計をしていました．3DCADのFusion360を扱う経験をしました．
-            </Typography>
-          </Paper>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent>
-          <Typography variant="body2" color="inherit">
-            2016.05-2021.05
-          </Typography>
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot className={classes.mainred}>
-            <PencilIcon />
-          </TimelineDot>
-          <TimelineConnector className={classes.Tail} />
-        </TimelineSeparator>
-        <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body1" component="h6">
-              <Link href='https://www.try-plus.com/schools/342' className={classes.maincolor} target="_blank">
-              トライプラス宝ヶ池駅前校
-              </Link>
-            </Typography>
-            <Typography variant="body2">
-              塾講師として小学生から浪人生まで幅広く見てきました．
             </Typography>
           </Paper>
         </TimelineContent>
@@ -166,7 +138,7 @@ const History: React.FC = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body1" component="h6">
+            <Typography variant="body2" component="h6">
               <Link href='https://www.usss.kyoto-u.ac.jp/' className={classes.maincolor} target="_blank">
               京都大学宇宙総合学研究ユニット
               </Link>
@@ -191,38 +163,13 @@ const History: React.FC = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body1" component="h6">
+            <Typography variant="body2" component="h6">
               <Link href='https://hilltop21.co.jp/' className={classes.maincolor} target="_blank">
               HILLTOP株式会社
               </Link>
             </Typography>
             <Typography variant="body2">
               モデラーとして，鳥人間で培った製図能力を活かしながらGO2camやSOLIDWORKSを用いた2Dから3Dへの図面引き起こしや切削プログラム作成の経験をしました．
-            </Typography>
-          </Paper>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent>
-          <Typography variant="body2" color="inherit">
-            2019.12
-          </Typography>
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot className={classes.mainred}>
-            <MemoryIcon />
-          </TimelineDot>
-          <TimelineConnector className={classes.Tail} />
-        </TimelineSeparator>
-        <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body1" component="h6">
-              <Link href='https://www.proglab.education/news/20191129.html' className={classes.maincolor} target="_blank">
-              ロボット教室
-              </Link>
-            </Typography>
-            <Typography variant="body2">
-              小学生を対象としたArduinoと3Dプリンタを用いたロボット製作全般の運営支援をしました．
             </Typography>
           </Paper>
         </TimelineContent>
@@ -241,7 +188,7 @@ const History: React.FC = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body1" component="h6">
+            <Typography variant="body2" component="h6">
               <Link href='https://www.kais.kyoto-u.ac.jp/japanese/' className={classes.subcolor} target="_blank">
               京都大学大学院農学研究科
               </Link><br />
@@ -258,30 +205,7 @@ const History: React.FC = () => {
               <Link href='http://energy.kais.kyoto-u.ac.jp/index.html' className={classes.subcolor} target="_blank">
               農業システム工学分野
               </Link>
-              に入りました．
-            </Typography>
-          </Paper>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent>
-          <Typography variant="body2" color="inherit">
-            2020.04-2021.09
-          </Typography>
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineDot className={classes.mainred}>
-            <QuestionAnswerIcon />
-          </TimelineDot>
-          <TimelineConnector className={classes.Tail} />
-        </TimelineSeparator>
-        <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body1" component="h6" className={classes.maincolor}>
-              京都大学大学院農学研究科(NO URL)
-            </Typography>
-            <Typography variant="body2">
-              ティーチングアシスタント/チューターとして，学部3回生向け学生実験の指導/留学生の生活支援をしています．
+              に入りました．ティーチングアシスタント/チューターとして，学部3回生向け学生実験の指導/留学生の生活支援もしました．
             </Typography>
           </Paper>
         </TimelineContent>
@@ -300,11 +224,11 @@ const History: React.FC = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body1" component="h6" className={classes.subcolor}>
-              深層学習・機械学習勉強会(NO URL)
+            <Typography variant="body2" component="h6" className={classes.subcolor}>
+              深層学習・機械学習勉強会
             </Typography>
             <Typography variant="body2">
-              Python3系でのTensorFlow・kerasを用いた深層学習勉強会を週一で行っています．
+              Python3系でのTensorFlow・kerasを用いた深層学習勉強会を行っていました．
             </Typography>
           </Paper>
         </TimelineContent>
@@ -323,13 +247,13 @@ const History: React.FC = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body1" component="h6">
+            <Typography variant="body2" component="h6">
             <Link href='https://space.innovationkyoto.org/' className={classes.maincolor} target="_blank">
               京都大学総合生存学館有人宇宙学研究センター
             </Link>
             </Typography>
             <Typography variant="body2">
-              オフィスアシスタントとして長期真空木材実験(Pythonを用いたプログラム作成)の運行をしています．
+              オフィスアシスタントとして長期真空木材実験(Pythonを用いたプログラム作成)の運行をしていました．
             </Typography>
           </Paper>
         </TimelineContent>
@@ -348,13 +272,14 @@ const History: React.FC = () => {
         </TimelineSeparator>
         <TimelineContent>
           <Paper elevation={3} className={classes.paper}>
-            <Typography variant="body1" component="h6">
+            <Typography variant="body2" component="h6">
             <Link href='https://www.glico.com/jp/' className={classes.subcolor} target="_blank">
               江崎グリコ株式会社
             </Link>
             </Typography>
             <Typography variant="body2">
-              経営企画部で働いています．
+              経営企画部デジタル化推進チーム(-2022.11)．現在、デジタル推進部デジタルコミュニケーショングループ．
+              某サイトを運営したり、SQL書いたり、Python書いたり、AWSいじったり、クソザコPMしたり．なんやかんや楽しくやってます．
             </Typography>
           </Paper>
         </TimelineContent>

@@ -18,15 +18,15 @@ const App: React.FC = () => {
       <section id='about'>
         <About />
       </section>
-      <section id='achievements'>
-        <Achievements />
-      </section>
       <section id='history'>
         <History />
       </section>
+      <section id='achievements'>
+        <Achievements />
+      </section>
       <ScrollUp />
       <div id="copyright">
-        <small>&nbsp;&nbsp;&nbsp;&copy; 2022 KAITO MASUDA. All Rights Reserved.<br />　</small>
+        <small>&nbsp;&nbsp;&nbsp;&copy; 2023 KAITO MASUDA. All Rights Reserved.<br />　</small>
       </div>
     </>
   );
