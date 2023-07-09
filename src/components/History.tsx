@@ -1,5 +1,5 @@
 import React from 'react';
-import Box from '@material-ui/core/Box'
+import Box from '@mui/material/Box'
 import Link from '@material-ui/core/Link'
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -59,7 +59,7 @@ const History: React.FC = () => {
 
   return (
     <p className={classes.backcolor}>
-      <Box p={2}>
+      <Box mt={2}>
         <Box display='flex' justifyContent='center' p={1} >
           <Typography variant='h5' >
             History

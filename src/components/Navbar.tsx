@@ -1,6 +1,6 @@
 import React from 'react'
 import AppBar from '@material-ui/core/AppBar'
-import Box from '@material-ui/core/Box'
+import Box from '@mui/material/Box'
 import { makeStyles } from '@material-ui/core/styles'
 import Link from '@material-ui/core/Link'
 import TwitterIcon from '@material-ui/icons/Twitter'

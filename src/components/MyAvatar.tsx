@@ -1,9 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import Box from '@material-ui/core/Box'
+import Box from '@mui/material/Box'
 import Avatar from '@material-ui/core/Avatar'
 import Typography from '@material-ui/core/Typography'
-import Link from '@material-ui/core/Link'
 
 // 画像ファイルをインポート
 import ImageFile from '../static/images/pu.png'

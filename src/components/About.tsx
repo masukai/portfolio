@@ -1,5 +1,5 @@
 import React from 'react'
-import Box from '@material-ui/core/Box'
+import Box from '@mui/material/Box'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -14,7 +14,7 @@ const About: React.FC = () => {
   const classes = useStyles();
   return (
     <p className={classes.backcolor}>
-      <Box p={2}>
+      <Box mt={2}>
         <Box display='flex' justifyContent='center' p={1}>
           <Typography variant='h5' >
             About
