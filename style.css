@@ -49,7 +49,7 @@
 }
 @media (prefers-color-scheme: dark) {
   .heading-lv3 {
-    background-color: #e8b500;
+    color: #000000;
   }
 }
 
