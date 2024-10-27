@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Arial", "メイリオ", sans-serif;
 }
 
 .wrap {
@@ -21,7 +22,6 @@
   padding: 16px;
   background-color: #ffffff;
 }
-
 @media (prefers-color-scheme: dark) {
   .content {
     background-color: #444444;
@@ -47,7 +47,6 @@
   margin: 2px auto 2px auto ;
   padding:10px 10px 10px 10px;
 }
-
 @media (prefers-color-scheme: dark) {
   .heading-lv3 {
     background-color: #ffa200;
@@ -82,7 +81,6 @@
   height: auto;
   border-radius: 40%;
 }
-
 @media (prefers-color-scheme: dark) {
   a {
     color: #00f7ff;
@@ -159,11 +157,9 @@
   flex-wrap: wrap;
   gap: 10px 2%; /* 画像の間に余白を設定 */
 }
-
 .container-6 a {
   width:14%; /* 1列に設定 */
 }
-
 @media (max-width: 768px) {
   .container-6{
       gap:10px 3%;
