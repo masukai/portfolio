@@ -1,192 +1,784 @@
+/* ===========================================
+   Base & Reset
+   =========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Arial", "メイリオ", sans-serif;
+  font-family: "Inter", "Noto Sans JP", "Arial", sans-serif;
 }
 
-.wrap {
-  padding: 20px 0 30px;
-  background-color: #e0e0e0;
+html {
+  scroll-behavior: smooth;
 }
+
+/* ===========================================
+   CSS Variables for Theme
+   =========================================== */
+:root {
+  --bg-wrap: #f5f5f5;
+  --bg-content: #ffffff;
+  --bg-box: #fafafa;
+  --bg-glass: rgba(255, 255, 255, 0.7);
+  --text-color: #333;
+  --text-muted: #888;
+  --link-color: #0066cc;
+  --link-hover: #004499;
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-medium: rgba(0, 0, 0, 0.12);
+  --border-color: #e0e0e0;
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --gradient-start: #fed001;
+  --gradient-end: #ff6b6b;
+}
+
+/* Dark theme via system preference */
 @media (prefers-color-scheme: dark) {
-  .wrap {
-    background-color: #818181;
+  :root {
+    --bg-wrap: #1a1a1a;
+    --bg-content: #2d2d2d;
+    --bg-box: #363636;
+    --bg-glass: rgba(45, 45, 45, 0.7);
+    --text-color: #f0f0f0;
+    --text-muted: #999;
+    --link-color: #5cc8ff;
+    --link-hover: #8dd9ff;
+    --shadow-light: rgba(0, 0, 0, 0.3);
+    --shadow-medium: rgba(0, 0, 0, 0.4);
+    --border-color: #444;
+    --glass-border: rgba(255, 255, 255, 0.1);
   }
+}
+
+/* Manual dark theme override */
+[data-theme="dark"] {
+  --bg-wrap: #1a1a1a;
+  --bg-content: #2d2d2d;
+  --bg-box: #363636;
+  --bg-glass: rgba(45, 45, 45, 0.7);
+  --text-color: #f0f0f0;
+  --text-muted: #999;
+  --link-color: #5cc8ff;
+  --link-hover: #8dd9ff;
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.4);
+  --border-color: #444;
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Manual light theme override */
+[data-theme="light"] {
+  --bg-wrap: #f5f5f5;
+  --bg-content: #ffffff;
+  --bg-box: #fafafa;
+  --bg-glass: rgba(255, 255, 255, 0.7);
+  --text-color: #333;
+  --text-muted: #888;
+  --link-color: #0066cc;
+  --link-hover: #004499;
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-medium: rgba(0, 0, 0, 0.12);
+  --border-color: #e0e0e0;
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+/* ===========================================
+   Scroll Animations
+   =========================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.fade-in-delay-1 { animation-delay: 0.1s; }
+.fade-in-delay-2 { animation-delay: 0.2s; }
+.fade-in-delay-3 { animation-delay: 0.3s; }
+
+/* ===========================================
+   Theme Toggle Button
+   =========================================== */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 12px var(--shadow-medium);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--text-color);
+}
+#theme-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 4px 20px var(--shadow-medium);
+  border-color: #fed001;
+}
+
+/* Dark mode specific styling for toggle button */
+@media (prefers-color-scheme: dark) {
+  #theme-toggle {
+    border-color: #555;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+  }
+}
+[data-theme="dark"] #theme-toggle {
+  border-color: #555;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+}
+[data-theme="light"] #theme-toggle {
+  border-color: var(--border-color);
+}
+
+/* Show sun icon in dark mode, moon icon in light mode */
+.icon-sun { display: none; color: #ffcc00; }
+.icon-moon { display: block; color: #666; }
+
+@media (prefers-color-scheme: dark) {
+  .icon-sun { display: block; }
+  .icon-moon { display: none; }
+}
+
+[data-theme="dark"] .icon-sun { display: block; }
+[data-theme="dark"] .icon-moon { display: none; }
+
+[data-theme="light"] .icon-sun { display: none; }
+[data-theme="light"] .icon-moon { display: block; }
+
+/* Invert dark icons (X, GitHub) in dark mode */
+@media (prefers-color-scheme: dark) {
+  .icon-dark-invert:not([data-theme="light"] .icon-dark-invert) {
+    filter: invert(1);
+  }
+}
+[data-theme="dark"] .icon-dark-invert {
+  filter: invert(1);
+}
+[data-theme="light"] .icon-dark-invert {
+  filter: none;
+}
+
+/* ===========================================
+   Layout
+   =========================================== */
+.wrap {
+  padding: 40px 0 60px;
+  background-color: var(--bg-wrap);
+  min-height: 100vh;
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .content {
   width: 90%;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 16px;
-  background-color: #ffffff;
-}
-@media (prefers-color-scheme: dark) {
-  .content {
-    background-color: #444444;
-    color: #ffffff;
-  }
+  padding: 40px 32px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px var(--shadow-light);
+  transition: all 0.3s ease;
 }
 
+/* ===========================================
+   Typography
+   =========================================== */
 .heading-lv1 {
-  font-size: 32px;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .heading-lv2 {
-  font-size: 24px;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .heading-lv3 {
-  font-size: 20px;
-  font-weight:bold;
-  cursor:pointer;
-  background-color:#fed001;
-  width:unset;
-  border-radius:3px;
-  margin: 2px auto 2px auto ;
-  padding:10px 10px 10px 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #fed001 0%, #ffdd33 100%);
+  color: #1a1a1a;
+  width: unset;
+  border-radius: 16px;
+  margin: 2px auto;
+  padding: 14px 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(254, 208, 1, 0.3);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+.heading-lv3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s ease;
+}
+.heading-lv3:hover::before {
+  left: 100%;
+}
+.heading-lv3:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(254, 208, 1, 0.4);
+}
+
+/* Dark mode: add border for better visibility */
+[data-theme="dark"] .heading-lv3,
+.wrap[data-theme="dark"] .heading-lv3 {
+  border: 2px solid #ffdd33;
+  box-shadow: 0 4px 20px rgba(254, 208, 1, 0.5);
 }
 @media (prefers-color-scheme: dark) {
-  .heading-lv3 {
-    color: #000000;
+  .heading-lv3:not([data-theme="light"] .heading-lv3) {
+    border: 2px solid #ffdd33;
+    box-shadow: 0 4px 20px rgba(254, 208, 1, 0.5);
   }
+}
+[data-theme="light"] .heading-lv3 {
+  border: 2px solid transparent;
+  box-shadow: 0 4px 15px rgba(254, 208, 1, 0.3);
 }
 
 .heading-s {
-  font-size: 12px;
+  font-size: 13px;
+  line-height: 1.7;
 }
 
 .heading-margin {
-  margin-top: 32px;
+  margin-top: 48px;
 }
 
 .text {
-  margin: 16px 0 0;
+  margin: 20px 0 0;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 .text-center {
   text-align: center;
 }
 
+/* ===========================================
+   Profile Image with Gradient Ring
+   =========================================== */
 .profile-image {
-  margin: 8px 0 0;
+  margin: 24px 0 0;
   text-align: center;
 }
 
 .profile-image img {
-  width: 200px;
-  height: auto;
-  border-radius: 40%;
-}
-@media (prefers-color-scheme: dark) {
-  a {
-    color: #00f7ff;
-  }
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end), #5cc8ff, var(--gradient-start));
+  background-size: 300% 300%;
+  animation: gradientRotate 4s ease infinite;
+  box-shadow: 0 8px 30px var(--shadow-medium);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@keyframes gradientRotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.profile-image img:hover {
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: 0 12px 40px var(--shadow-medium);
+}
+
+/* ===========================================
+   Links
+   =========================================== */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--link-hover);
+}
+
+/* ===========================================
+   Box (経歴詳細) - Glassmorphism
+   =========================================== */
 .box {
   position: relative;
-  padding: 0.25em 0.75em;
-  border-top: solid 1px black;
-  border-bottom: solid 1px black;
+  padding: 20px 24px;
+  border-radius: 16px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-left: 4px solid #fed001;
+  margin: 12px 0;
+  transition: all 0.3s ease;
 }
-.box:before,
-.box:after {
-  content: '';
-  position: absolute;
-  top: -5px;
-  width: 1px;
-  height: -webkit-calc(100% + 10px);
-  height: calc(100% + 10px);
-  background-color: black;
-}
-.box:before {
-  left: 5px;
-}
-.box:after {
-  right: 5px;
+.box:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 20px var(--shadow-light);
 }
 .box p {
-  font-size: 12px;
+  font-size: 13px;
+  line-height: 1.8;
   margin: 0;
   padding: 0;
 }
 
+/* ===========================================
+   Legend (凡例) - Glassmorphism
+   =========================================== */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  font-size: 13px;
+}
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+.legend-item:hover {
+  background-color: var(--bg-box);
+}
+.legend-item b {
+  font-size: 16px;
+}
+
+/* ===========================================
+   Details (アコーディオン)
+   =========================================== */
+details {
+  margin-top: 8px;
+}
+details > div {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 20px 24px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  line-height: 1.8;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* ===========================================
+   Cards Container
+   =========================================== */
 #cards {
   display: flex;
   justify-content: center;
-}
-
-.card {
-  width: 150px;
-  height: 350px;
-}
-
-.cardart {
-  width: 150px;
-  height: 200px;
-}
-
-.cardbadge {
-  width: 100px;
-  height: 100px;
-}
-
-.cardsns {
-  width: 50px;
-  height: 50px;
-}
-
-.card:nth-child {
-  margin-right: 5px;
-  margin-left: 5px;
-}
-
-.picture img {
-  width: 100%;
-}
-
-.description {
-  width: 100%;
-  height: 145px;
-  padding-right: 6px;
-  padding-left: 6px;
-  box-sizing: border-box;
-}
-
-.description p {
-  font-size: 12px;
-}
-
-.descriptionart {
-  width: 100%;
-  height: 20px;
-  padding-right: 6px;
-  padding-left: 6px;
-  box-sizing: border-box;
-}
-
-.descriptionart p {
-  font-size: 12px;
 }
 
 .container-6 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px 2%; /* 画像の間に余白を設定 */
+  gap: 20px;
 }
 .container-6 a {
-  width:14%; /* 1列に設定 */
+  width: 14%;
 }
 @media (max-width: 768px) {
-  .container-6{
-      gap:10px 3%;
+  .container-6 {
+    gap: 12px;
   }
   .container-6 a {
-      width:30%; /* 2列に設定 */
+    width: 30%;
+  }
+}
+
+/* ===========================================
+   Book Cards - Glassmorphism
+   =========================================== */
+.card {
+  width: 150px;
+  height: auto;
+  min-height: 320px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px var(--shadow-medium);
+}
+
+.card:nth-child(n) {
+  margin: 4px;
+}
+
+.picture img {
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+.card:hover .picture img {
+  transform: scale(1.08);
+}
+
+.description {
+  width: 100%;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+.description p {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ===========================================
+   Art Cards
+   =========================================== */
+.cardart {
+  width: 150px;
+  height: auto;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cardart:hover {
+  transform: translateY(-8px) rotate(2deg);
+}
+
+.cardart .picture img {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  transition: all 0.3s ease;
+}
+.cardart:hover .picture img {
+  box-shadow: 0 8px 30px var(--shadow-medium);
+}
+
+.descriptionart {
+  width: 100%;
+  padding: 10px 6px;
+  box-sizing: border-box;
+}
+
+.descriptionart p {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ===========================================
+   Badge Cards
+   =========================================== */
+.cardbadge {
+  width: 100px;
+  height: 100px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cardbadge:hover {
+  transform: scale(1.12) rotate(5deg);
+}
+
+.cardbadge .picture img {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px var(--shadow-light);
+  transition: box-shadow 0.3s ease;
+}
+.cardbadge:hover .picture img {
+  box-shadow: 0 6px 20px var(--shadow-medium);
+}
+
+/* ===========================================
+   SNS/Links Cards - Enhanced Hover Effects
+   =========================================== */
+.cardsns {
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.cardsns::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(254,208,1,0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.cardsns:hover::before {
+  width: 80px;
+  height: 80px;
+}
+
+.cardsns:hover {
+  transform: scale(1.2) translateY(-4px);
+}
+
+.cardsns .picture img {
+  border-radius: 12px;
+  box-shadow: 0 2px 10px var(--shadow-light);
+  transition: all 0.3s ease;
+}
+.cardsns:hover .picture img {
+  box-shadow: 0 6px 20px var(--shadow-medium);
+}
+
+/* ===========================================
+   Footer
+   =========================================== */
+small {
+  display: block;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===========================================
+   Responsive Adjustments - Mobile First
+   =========================================== */
+@media (max-width: 768px) {
+  #theme-toggle {
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  .content {
+    width: 100%;
+    padding: 28px 20px;
+    border-radius: 0;
+    border: none;
+  }
+
+  .wrap {
+    padding: 0;
+  }
+
+  .heading-lv1 {
+    font-size: 28px;
+  }
+
+  .heading-lv2 {
+    font-size: 22px;
+  }
+
+  .heading-lv3 {
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 14px;
+  }
+
+  .profile-image img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .card {
+    width: 44%;
+    min-height: 280px;
+    margin: 2px;
+  }
+
+  .cardart {
+    width: 44%;
+  }
+
+  .cardart .picture img {
+    width: 100%;
+  }
+
+  .cardbadge {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cardsns {
+    width: 44px;
+    height: 44px;
+  }
+
+  .legend {
+    gap: 8px 12px;
+    padding: 12px 14px;
+    font-size: 12px;
+  }
+
+  .box {
+    padding: 16px 18px;
+    border-radius: 12px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+
+  details > div {
+    padding: 16px 18px;
+    border-radius: 12px;
+    font-size: 13px;
+  }
+
+  .container-6 {
+    gap: 10px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .heading-lv1 {
+    font-size: 24px;
+  }
+
+  .heading-lv2 {
+    font-size: 20px;
+  }
+
+  .heading-lv3 {
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+
+  .profile-image img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card {
+    width: 46%;
+    min-height: 260px;
+  }
+
+  .cardart {
+    width: 46%;
+  }
+
+  .cardsns {
+    width: 40px;
+    height: 40px;
+  }
+
+  .content {
+    padding: 24px 16px;
+  }
+
+  .legend {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .legend-item {
+    justify-content: flex-start;
+  }
+}
+
+/* Tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .content {
+    width: 95%;
+    padding: 36px 28px;
+  }
+
+  .card {
+    width: 150px;
+  }
+
+  .cardart {
+    width: 150px;
+  }
+}
+
+/* Hover effects only for non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover,
+  .cardart:hover,
+  .cardbadge:hover,
+  .cardsns:hover,
+  .heading-lv3:hover,
+  .profile-image img:hover,
+  .box:hover {
+    /* Hover effects enabled */
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .cardsns::before {
+    display: none;
+  }
+
+  .heading-lv3::before {
+    display: none;
+  }
+
+  .card:active {
+    transform: scale(0.98);
+  }
+
+  .cardsns:active {
+    transform: scale(0.95);
   }
 }
