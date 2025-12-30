@@ -64,6 +64,12 @@
     </script>
   </head>
   <body class="wrap">
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" aria-label="テーマ切り替え">
+      <span class="icon-sun">&#9728;</span>
+      <span class="icon-moon">&#9790;</span>
+    </button>
+
     <div class="content">
       <h1 class="heading-lv1 text-center">Portfolio</h1>
       <figure class="profile-image">
@@ -120,6 +126,7 @@
               alt="X"
               width="50"
               height="50"
+              class="icon-dark-invert"
             /></a>
           </div>
         </div>
@@ -160,6 +167,7 @@
               alt="GitHub"
               width="50"
               height="50"
+              class="icon-dark-invert"
             /></a>
           </div>
         </div>
@@ -516,10 +524,17 @@
       <details>
         <summary class="heading-lv3 heading-margin text-center">
           <span>
-            ○資格●業績◎受賞■成果
+            活動実績
           </span>
         </summary>
         <div style="margin-top:1em; margin-bottom:1em; padding:0px 10px 0px 10px;" >
+          <div class="legend">
+            <span class="legend-item"><b>○</b> 資格</span>
+            <span class="legend-item"><b>●</b> 業績</span>
+            <span class="legend-item"><b>◎</b> 受賞</span>
+            <span class="legend-item"><b>■</b> 成果</span>
+            <span class="legend-item"><b>・</b> その他</span>
+          </div>
           <b>2025年</b><br />
           <div class="heading-s">
             &nbsp;&nbsp;&nbsp;<b>■09.16</b>:
@@ -842,5 +857,34 @@
         &nbsp;&nbsp;&nbsp;&nbsp;© 2016-2025 KAITO MASUDA. All Rights Reserved.
       </small>
     </div>
+
+    <!-- Theme Toggle Script -->
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const body = document.body;
+
+      // Check for saved theme preference or default to system preference
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        body.setAttribute('data-theme', savedTheme);
+      }
+
+      themeToggle.addEventListener('click', () => {
+        const currentTheme = body.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
+          body.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+        } else if (currentTheme === 'light') {
+          body.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          // No manual preference set, check system preference and toggle opposite
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const newTheme = prefersDark ? 'light' : 'dark';
+          body.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+        }
+      });
+    </script>
   </body>
 </html>
