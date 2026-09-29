@@ -584,15 +584,7 @@ details > div {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 12px 40px var(--shadow-medium);
 }
-.featured-tag {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--accent);
-  background: rgba(3, 77, 172, 0.1);
-  padding: 3px 10px;
-  border-radius: 999px;
+.featured-card .tag {
   margin-bottom: 10px;
 }
 .featured-card h4 {
