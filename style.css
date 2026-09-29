@@ -518,35 +518,27 @@ a:hover {
 }
 
 /* ===========================================
-   Legend (凡例) - Glassmorphism
+   Activity Tags
    =========================================== */
-.legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 20px;
-  padding: 14px 18px;
-  margin-bottom: 16px;
-  background: var(--bg-glass);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 12px;
-  border: 1px solid var(--glass-border);
-  font-size: 13px;
-}
-.legend-item {
+.tag {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 8px;
-  border-radius: 8px;
-  transition: background-color 0.2s ease;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-right: 6px;
+  vertical-align: middle;
+  white-space: nowrap;
 }
-.legend-item:hover {
-  background-color: var(--bg-box);
-}
-.legend-item b {
-  font-size: 16px;
-}
+.tag.cert { background: #7c5cff; }
+.tag.research { background: #0f9d8f; }
+.tag.award { background: #c98a1f; }
+.tag.result { background: var(--accent); }
+.tag.article { background: #6b7280; }
+.tag.talk { background: #c2478f; }
 
 /* ===========================================
    Details (アコーディオン)
@@ -566,6 +558,99 @@ details > div {
   line-height: 1.8;
   font-size: 14px;
   transition: all 0.3s ease;
+}
+
+/* ===========================================
+   Featured Cards - Glassmorphism
+   =========================================== */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.featured-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.featured-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px var(--shadow-medium);
+}
+.featured-card .tag {
+  margin-bottom: 10px;
+}
+.featured-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.featured-card h4 a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.featured-card h4 a:hover {
+  color: var(--link-color);
+}
+.featured-card p {
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* ===========================================
+   Contact CTA
+   =========================================== */
+.contact-box {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  text-align: center;
+}
+.contact-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+}
+.contact-cta {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px var(--accent-shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--accent-shadow-strong);
 }
 
 /* ===========================================
@@ -818,6 +903,14 @@ small {
     margin: 2px;
   }
 
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-box {
+    padding: 16px 18px;
+  }
+
   .cardart {
     width: 44%;
   }
@@ -838,12 +931,6 @@ small {
   .cardsns .picture img {
     width: 44px;
     height: 44px;
-  }
-
-  .legend {
-    gap: 8px 12px;
-    padding: 12px 14px;
-    font-size: 12px;
   }
 
   .box {
@@ -908,14 +995,6 @@ small {
     padding: 24px 16px;
   }
 
-  .legend {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .legend-item {
-    justify-content: flex-start;
-  }
 }
 
 /* Tablet landscape */

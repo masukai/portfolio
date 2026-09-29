@@ -70,7 +70,8 @@
         "https://speakerdeck.com/masukai",
         "https://scholar.google.co.jp/citations?user=FXu7OxcAAAAJ",
         "https://lapras.com/public/TLOGSN1"
-      ]
+      ],
+      "email": "mailto:me@masukai.dev"
     }
     </script>
     <!-- Google tag (gtag.js) -->
@@ -94,6 +95,7 @@
     <aside id="toc" aria-label="目次">
       <nav>
         <ul>
+          <li><a href="#featured">Featured</a></li>
           <li><a href="#goals">目標</a></li>
           <li><a href="#links">Links</a></li>
           <li><a href="#hobby">趣味</a></li>
@@ -132,6 +134,28 @@
         1児の父。
       </p>
 
+      <h3 id="featured" class="heading-section">
+        Featured
+      </h3>
+      <br />
+      <div class="featured-grid">
+        <div class="featured-card">
+          <span class="tag result">OSS</span>
+          <h4><a href="https://github.com/drt-hub/drt" target="_blank" rel="noopener noreferrer">drt (data reverse tool)</a></h4>
+          <p>コードファーストなCLIベース、dbt/dltリスペクトなリバースETLのOSSを個人で開発・運用しています。</p>
+        </div>
+        <div class="featured-card">
+          <span class="tag article">記事</span>
+          <h4><a href="https://note.com/scenelive_massu" target="_blank" rel="noopener noreferrer">技術記事 (SceneLive公式note)</a></h4>
+          <p>Dagster移行やLangfuse×BigQueryなど、データ・LLM基盤の実装知見を継続して執筆・公開しています。</p>
+        </div>
+        <div class="featured-card">
+          <span class="tag research">研究</span>
+          <h4><a href="https://prtimes.jp/main/html/rd/p/000000142.000090268.html" target="_blank" rel="noopener noreferrer">対話の「認識のズレ」可視化技術・特許出願</a></h4>
+          <p>社内研究として携わった対話構造分析技術が、Scene Liveの特許出願としてプレスリリースになりました。</p>
+        </div>
+      </div>
+
       <details id="goals">
         <summary class="heading-lv3 heading-margin text-center">
           <span>
@@ -160,6 +184,14 @@
       <h3 id="links" class="heading-section">
         Links
       </h3>
+      <br />
+      <div class="contact-box">
+        <p class="contact-label">お仕事のご相談・お問い合わせ</p>
+        <div class="contact-cta">
+          <a class="contact-btn" href="mailto:me@masukai.dev">✉ me@masukai.dev</a>
+          <a class="contact-btn" href="https://lapras.com/public/TLOGSN1" target="_blank" rel="noopener noreferrer">LAPRAS</a>
+        </div>
+      </div>
       <br />
       <div class="container-6">
         <div class="cardsns">
@@ -594,57 +626,56 @@
           </span>
         </summary>
         <div>
-          <div class="legend">
-            <span class="legend-item"><b>○</b> 資格</span>
-            <span class="legend-item"><b>●</b> 業績</span>
-            <span class="legend-item"><b>◎</b> 受賞</span>
-            <span class="legend-item"><b>■</b> 成果</span>
-            <span class="legend-item"><b>・</b> その他</span>
-          </div>
           <b>2026年</b><br />
           <div class="heading-s">
-            <b>・09.18</b>:
+            <span class="tag result">成果</span><b>09.29</b>:
+            <a href="https://prtimes.jp/main/html/rd/p/000000142.000090268.html" target="_blank" rel="noopener noreferrer"
+              >Scene Live、コミュニケーションにおける「認識のズレ」の可視化技術を開発し、特許を出願</a
+            >:
+            社内研究として携わっていた対話構造分析技術が、特許出願のプレスリリースになりました<br />
+
+            <span class="tag article">記事</span><b>09.18</b>:
             <a href="https://note.com/scenelive_massu/n/n522602126bc7" target="_blank" rel="noopener noreferrer"
               >LangfuseとBigQueryを繋いだ話 ─ LLMの改善も、LLMによる分析もBigQueryで</a
             >:
             会社公式noteにて、技術記事を執筆・投稿しました<br />
 
-            <b>・09.09</b>:
+            <span class="tag article">記事</span><b>09.09</b>:
             <a href="https://note.com/scenelive_massu/n/n3814c8d06386" target="_blank" rel="noopener noreferrer"
               >プロダクトに Langfuseを入れた話 ─ LLM 運用を“見える化”するまで</a
             >:
             会社公式noteにて、技術記事を執筆・投稿しました<br />
-            <b>・08.28</b>:
+            <span class="tag article">記事</span><b>08.28</b>:
             <a href="https://note.com/scenelive_massu/n/n2edba7bc6b50" target="_blank" rel="noopener noreferrer"
               >データの消費者は「ヒト」だけじゃない ─ AI ネイティブなデータ基盤の実態</a
             >:
             会社公式noteにて、技術記事を執筆・投稿しました<br />
-            <b>・07.10</b>:
+            <span class="tag article">記事</span><b>07.10</b>:
             <a href="https://note.com/scenelive_massu/n/n585ce01db010" target="_blank" rel="noopener noreferrer"
               >Dagster の“ネイティブ統合”が効いた話(dlt / dbt + リバースETL)</a
             >:
             会社公式noteにて、技術記事を執筆・投稿しました<br />
-            <b>・07.06</b>:
+            <span class="tag article">記事</span><b>07.06</b>:
             <a href="https://note.com/scenelive_massu/n/n543858cec35f" target="_blank" rel="noopener noreferrer"
               >Dagster 移行、500テーブル超を止めずに引っ越した話</a
             >:
             会社公式noteにて、技術記事を執筆・投稿しました<br />
-            <b>・06.24</b>:
+            <span class="tag article">記事</span><b>06.24</b>:
             <a href="https://note.com/scenelive_massu/n/nbdec2e6d1487" target="_blank" rel="noopener noreferrer"
               >なぜ Airflow から Dagster に乗り換えたのか</a
             >:
             会社公式noteにて、技術記事を執筆・投稿しました<br />
-            <b>■03.27</b>:
+            <span class="tag result">成果</span><b>03.27</b>:
             <a href="https://github.com/drt-hub/drt" target="_blank" rel="noopener noreferrer"
               >drt (data reverse tool)</a
             >:
             コードファーストなCLIベース、dbt/dltリスペクトなリバースETLのOSSを作っています<br />
-            <b>■03.27</b>:
+            <span class="tag result">成果</span><b>03.27</b>:
             <a href="https://github.com/drt-hub" target="_blank" rel="noopener noreferrer"
               >drt-hub (Organization)</a
             >:
             リバースETLのOSSを作るオーガニゼーションを作りました<br />
-            <b>・03.24</b>:
+            <span class="tag article">記事</span><b>03.24</b>:
             <a href="https://note.com/scenelive_massu/n/n1d8f8b6598d2" target="_blank" rel="noopener noreferrer"
               >【1ヶ月半で構築】bq事業のモダンデータスタック ─ メダリオンアーキテクチャからスタースキーマまで</a
             >:
@@ -652,65 +683,65 @@
           </div><br />
           <b>2025年</b><br />
           <div class="heading-s">
-            <b>■09.16</b>:
+            <span class="tag result">成果</span><b>09.16</b>:
             <a href="https://github.com/masukai/GC-backend-sample" target="_blank" rel="noopener noreferrer"
               >GC-backend-sample</a
             >:
             Google Cloudをterraformで複数人操作する時の設定サンプル<br />
-            <b>・09.12</b>:
+            <span class="tag talk">登壇</span><b>09.12</b>:
             <a href="https://speakerdeck.com/masukai/xin-siikotoniqu-zu-mushi-shi-shu" target="_blank" rel="noopener noreferrer"
               >新しいことに取組む仕事術: Speaker Deck</a
             >
             退職の際にポエム(学んだことのお話)を発表しました<br />
-            <b>■08.09</b>:
+            <span class="tag result">成果</span><b>08.09</b>:
             <a href="https://github.com/masukai/zipishi-blog" target="_blank" rel="noopener noreferrer"
               >zipishi-blog</a
             >
             Hugo+Cloudflareによる<a href="https://zipishi-blog.pages.dev/" target="_blank" rel="noopener noreferrer"
               >ブログ構築と運用</a
             >をしています。GA4+BQのデータ周りの接続やGemini、CodexによるAI駆動開発(?)もしています。<br />
-            <b>●05.23</b>:
+            <span class="tag research">研究</span><b>05.23</b>:
             京都大学博士(農学) 取得 <br />
           </div><br />
           <b>2024年</b><br />
           <div class="heading-s">
-            <b>○10.26</b>:
+            <span class="tag cert">資格</span><b>10.26</b>:
             <a href="https://aws.amazon.com/jp/certification/certified-solutions-architect-associate/" target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Associate (SAA-C03)</a>
             合格 <br />
-            <b>・07.01</b>:
+            <span class="tag talk">登壇</span><b>07.01</b>:
             <a href="https://with.glico.com/news/glico/glico_202412.html" target="_blank" rel="noopener noreferrer"
               >with Glico 社員駅伝出演</a
             >
             データからお客様をサポートする デジタル推進部 まっすー<br />
-            <b>・06.05</b>:
+            <span class="tag talk">登壇</span><b>06.05</b>:
             <a href="https://youtu.be/7PHSvFySOr8?si=TJgbebespTZOg84S" target="_blank" rel="noopener noreferrer"
               >外資就活Live YouTube アーカイブ動画</a
             >
             26卒 外資就活Live Spring 2024_Academicセッション<br />
-            <b>・04.25</b>:
+            <span class="tag talk">登壇</span><b>04.25</b>:
             <a href="https://event3.gaishishukatsu.com/gaishu-live-2024#cont-academic" target="_blank" rel="noopener noreferrer"
               >26卒向け新卒就活イベント登壇</a
             >
             外資就活Live Spring2024 研究職・理系職志望向け Academic Session<br />
-            <b>○04.08</b>:
+            <span class="tag cert">資格</span><b>04.08</b>:
             <a href="https://aws.amazon.com/jp/certification/certified-cloud-practitioner/" target="_blank" rel="noopener noreferrer">AWS Certified Cloud Practitioner (CLF-C02)</a>
             合格 <br />
-            ■
+            <span class="tag result">成果</span>
             <a href="https://github.com/masukai/pdf-difference" target="_blank" rel="noopener noreferrer"
               >pdf-difference</a
             >:
             PDFの差分を可視化するシステム(terraform+AWS Lambda：製作途中)<br />
-            ■
+            <span class="tag result">成果</span>
             <a href="https://github.com/masukai/AWS-EC2-RDS-sample" target="_blank" rel="noopener noreferrer"
               >AWS-EC2-RDS-sample</a
             >:
             AWSでプライベートサブネットにEC2とRDSを立てるterraformのコード。RDPもできる。<br />
-            ■
+            <span class="tag result">成果</span>
             <a href="https://github.com/masukai/AWS-billing-bot" target="_blank" rel="noopener noreferrer"
               >AWS-billing-bot</a
             >:
             AWSのteams用料金通知botをterraformで作成（Lambda使用）<br />
-            ■
+            <span class="tag result">成果</span>
             <a href="https://github.com/masukai/AWS-backend-sample" target="_blank" rel="noopener noreferrer"
               >AWS-backend-sample</a
             >:
@@ -718,24 +749,24 @@
           </div><br />
           <b>2023年</b><br />
           <div class="heading-s">
-            ■
+            <span class="tag result">成果</span>
             <a href="https://github.com/masukai/metabase-ecs-sample" target="_blank" rel="noopener noreferrer"
               >metabase-ecs-sample</a
             >:
             会社のプロジェクトで作成しているデータスクレイピング&データ統合・可視化BIツールシステムの
             一般的な技術をまとめたもの(製作途中)<br />
-            ■
+            <span class="tag result">成果</span>
             <a href="https://github.com/masukai/terraform-store" target="_blank" rel="noopener noreferrer">terraform-store</a
             >: TerraformでIaCしたAWSの事例集<br />
-            <b>○12.26</b>:
+            <span class="tag cert">資格</span><b>12.26</b>:
             <a href="https://www.toukei-kentei.jp/exam/grade2/" target="_blank" rel="noopener noreferrer">統計検定2級(CBT)</a>
             合格 <br />
-            <b>○04.16</b>:
+            <span class="tag cert">資格</span><b>04.16</b>:
             <a href="https://www.ipa.go.jp/shiken/kubun/ap.html" target="_blank" rel="noopener noreferrer"
               >令和5年度応用情報技術者試験</a
             >
             合格<br />
-            <b>●03.03</b>:
+            <span class="tag research">研究</span><b>03.03</b>:
             <a href="http://jsabees.org/ecb/" target="_blank" rel="noopener noreferrer">Environmental Control in Biology</a>
             Published / 出版<br />
             Title / タイトル:
@@ -744,7 +775,7 @@
               >Evaluation of Leaf Contours of the Leaf Lettuce “Greenwave” Using an
               Elliptic Fourier Descriptor</a
             ><br />
-            <b>・02.18</b>:
+            <span class="tag talk">登壇</span><b>02.18</b>:
             <a href="https://www.edgeweb.jp/" target="_blank" rel="noopener noreferrer"
               >ソーシャルビジネスプランコンペ edge2022 ファイナル</a
             ><br />
@@ -753,7 +784,7 @@
           </div><br />
           <b>2022年</b><br />
           <div class="heading-s">
-            <b>●07.01</b>:
+            <span class="tag research">研究</span><b>07.01</b>:
             <a href="http://jsabees.org/ecb/" target="_blank" rel="noopener noreferrer">Environmental Control in Biology</a>
             Published / 出版<br />
             Title / タイトル:
@@ -762,7 +793,7 @@
               >Effects of Time Variation of Light Intensity on the Growth of the
               Leaf Lettuce “Greenwave”</a
             ><br />
-            <b>○03.04</b>:
+            <span class="tag cert">資格</span><b>03.04</b>:
             <a href="https://www.jafp.or.jp/exam/" target="_blank" rel="noopener noreferrer"
               >3級ファイナンシャル・プランニング技能検定 (2022/1)</a
             >
@@ -770,19 +801,19 @@
           </div><br />
           <b>2021年</b><br />
           <div class="heading-s">
-            ■
+            <span class="tag result">成果</span>
             <a href="https://github.com/masukai/EllipticFourierDescriptors" target="_blank" rel="noopener noreferrer"
               >EllipticFourierDescriptors</a
             >:
             画像内の任意の形状に関して、楕円フーリエ記述子による形状特徴量計算を行う研究用ツール<br />
-            ■
+            <span class="tag result">成果</span>
             <a href="https://github.com/masukai/AutoColorIntensity" target="_blank" rel="noopener noreferrer"
               >AutoColorIntensity</a
             >: Pythonで画像内のColor Intensityを計測できるようにした研究用ツール<br />
-            ■
+            <span class="tag result">成果</span>
             <a href="https://github.com/masukai/AutoArea-GUI" target="_blank" rel="noopener noreferrer">AutoArea-GUI</a>:
             研究用ツール「AutoArea」にGUIをつけて、プログラム初心者でも操作しやすいように変更<br />
-            <b>●12.15</b>:
+            <span class="tag research">研究</span><b>12.15</b>:
             <a href="http://jsabees.org/ecb/" target="_blank" rel="noopener noreferrer">Environmental Control in Biology</a>
             Published / 出版<br />
             Title / タイトル:
@@ -792,7 +823,7 @@
               blue irradiations on plant morphology and shoot fresh weight in leaf
               lettuce 'Greenwave'</a
             ><br />
-            <b>・11.02</b>:
+            <span class="tag talk">登壇</span><b>11.02</b>:
             <a
               href="https://sites.google.com/view/jsabees-online-congress2021/%E3%83%9B%E3%83%BC%E3%83%A0?authuser=0" target="_blank" rel="noopener noreferrer"
             >
@@ -801,19 +832,19 @@
             プレゼン発表<br />
             タイトル:
             太陽周期を模倣した光強度の時間変動とリーフレタスの成長/形態の関係<br />
-            <b>○10.27</b>:
+            <span class="tag cert">資格</span><b>10.27</b>:
             <a href="https://mos.odyssey-com.co.jp/index.html" target="_blank" rel="noopener noreferrer"
               >Microsoft Office Specialist (MOS) Office Excel®︎ 2013</a
             >
             合格<br />
-            <b>・09.30</b>:
+            <span class="tag talk">登壇</span><b>09.30</b>:
             <a href="https://kansai.j-sam.org/blog/2021/07/15/146-2/" target="_blank" rel="noopener noreferrer">
               関西農業食料工学会第146回例会</a
             >
             プレゼン発表<br />
             タイトル:
             赤青交互/同時LED照射におけるリーフレタスの地上部重量と形態の因果解析<br />
-            <b>・09.22</b>:
+            <span class="tag talk">登壇</span><b>09.22</b>:
             <a href="https://sasj.org/meeting/2021/" target="_blank" rel="noopener noreferrer"
               >2021年度農業施設学会大会(オンライン)
               研究発表会・農業施設学会50周年記念事業</a
@@ -821,19 +852,19 @@
             ポスター発表<br />
             タイトル:
             リーフレタスにおける照射強度の時間変動と暗期の効果<br />
-            <b>・09.15</b>:
+            <span class="tag talk">登壇</span><b>09.15</b>:
             <a href="https://jsamfe2021.bpes.kyushu-u.ac.jp/" target="_blank" rel="noopener noreferrer">
               第79回農業食料工学会年次大会(オンライン開催)</a
             >
             プレゼン発表<br />
             タイトル:
             赤青交互照射と同時照射におけるリーフレタスの時系列生長解析<br />
-            <b>○04.27</b>:
+            <span class="tag cert">資格</span><b>04.27</b>:
             <a href="https://www.ipa.go.jp/shiken/kubun/fe.html" target="_blank" rel="noopener noreferrer"
               >令和2年度基本情報技術者試験(CBT)</a
             >
             合格<br />
-            <b>◎02.13</b>:
+            <span class="tag award">受賞</span><b>02.13</b>:
             <a href="https://www.usss.kyoto-u.ac.jp/events/symp2020-2/" target="_blank" rel="noopener noreferrer"
               >宇宙ユニットシンポジウム「eポスター展示交流会」</a
             >
@@ -841,10 +872,10 @@
           </div><br />
           <b>2020年</b><br />
           <div class="heading-s">
-            ■
+            <span class="tag result">成果</span>
             <a href="https://github.com/masukai/AutoArea" target="_blank" rel="noopener noreferrer">AutoArea</a>:
             Pythonで画像内の面積を自動で求める研究用ツール<br />
-            <b>◎09.25</b>:
+            <span class="tag award">受賞</span><b>09.25</b>:
             <a href="https://kansai.j-sam.org/blog/2020/07/16/144-2/" target="_blank" rel="noopener noreferrer">
               関西農業食料工学会第144回例会
             </a>
@@ -854,7 +885,7 @@
             <br />
             タイトル:
             EFD(楕円フーリエ記述子)による葉輪郭の定量化について <br />
-            <b>◎09.05</b>:
+            <span class="tag award">受賞</span><b>09.05</b>:
             <a href="https://peakers.jp/projects/66" target="_blank" rel="noopener noreferrer"
               >グリコと学ぶ「食+AI」コンペティション+ビジネスコンテスト3Days-2020
               Summer-</a
@@ -862,7 +893,7 @@
             総合優勝(<a href="https://journal.peakers.jp/1501072334/" target="_blank" rel="noopener noreferrer"
               >インタビュー</a
             >) <br />
-            <b>●08.24-26 (canceled)</b>: International Symposium
+            <span class="tag research">研究</span><b>08.24-26 (canceled)</b>: International Symposium
             on Machinery and Mechatronics for Agriculture and Biosystems Engineering
             (ISMAB) 2020, Accepted a peer-reviewed treatise / 査読付き英語論文受諾
             <br />
@@ -872,19 +903,19 @@
           </div><br />
           <b>2019年</b><br />
           <div class="heading-s">
-            <b>◎11.24</b>:
+            <span class="tag award">受賞</span><b>11.24</b>:
             <a
               href="https://tnlabsa.wixsite.com/tnlab/space-architecture-award6-awards" target="_blank" rel="noopener noreferrer"
               >第6回宇宙建築賞</a
             >
             入賞 作品: Our Eco<br />
-            <b>・09.17</b>:
+            <span class="tag talk">登壇</span><b>09.17</b>:
             <a href="https://jglobal.jst.go.jp/detail?JGLOBAL_ID=201902226143522537" target="_blank" rel="noopener noreferrer"
               >日本木材加工技術協会年次大会</a
             ><br />
             タイトル:
             木材の宇宙環境における物性変化の解析と宇宙利用への進展<br />
-            <b>・03.17</b>:
+            <span class="tag talk">登壇</span><b>03.17</b>:
             <a
               href="https://npofuji3776.jimdofree.com/%E8%AC%9B%E6%BC%94%E4%BA%88%E7%A8%BF%E9%9B%86-%E7%A0%94%E7%A9%B6%E9%80%9F%E5%A0%B1%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96/%E7%AC%AC12%E5%9B%9E%E6%88%90%E6%9E%9C%E5%A0%B1%E5%91%8A%E4%BC%9A/" target="_blank" rel="noopener noreferrer"
               >富士山測候所を活用する会 第12回成果報告会</a
@@ -894,7 +925,7 @@
               href="https://npofuji3776.org/document/20190317_no12_annual%20meeting/12_P-13_KYOTO-U_K%20Miki.pdf" target="_blank" rel="noopener noreferrer"
               >富士山山頂における空中花粉粒子が示す新たな花粉輸送モデル</a
             ><br />
-            <b>◎02.09</b>:
+            <span class="tag award">受賞</span><b>02.09</b>:
             <a href="https://www.usss.kyoto-u.ac.jp/events/symp2019/" target="_blank" rel="noopener noreferrer"
               >宇宙ユニットシンポジウム「宇宙研究の広場2019」</a
             >
@@ -906,7 +937,7 @@
           </div><br />
           <b>2018年</b><br />
           <div class="heading-s">
-            <b>・10.24-10.26</b>:
+            <span class="tag talk">登壇</span><b>10.24-10.26</b>:
             <a href="https://www.jsass.jp/conference/sstc62.php" target="_blank" rel="noopener noreferrer">
               第62回宇宙科学技術連合講演会</a
             ><br />
@@ -1014,7 +1045,7 @@
         const tocToggle = document.getElementById('toc-toggle');
         const tocBackdrop = document.getElementById('toc-backdrop');
         const tocLinks = document.querySelectorAll('#toc a');
-        const sectionIds = ['goals', 'links', 'hobby', 'art', 'books', 'career', 'activities', 'badges', 'future'];
+        const sectionIds = ['featured', 'goals', 'links', 'hobby', 'art', 'books', 'career', 'activities', 'badges', 'future'];
         const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
         // Scroll-spy via IntersectionObserver
